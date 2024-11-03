@@ -1,0 +1,123 @@
+.ketcher-body {
+  flex: 1;
+  position: relative;
+
+  :global(.ketcher-custom-wrap) {
+    display: flex;
+    align-items: center;
+
+    & + hr {
+      display: none !important;
+    }
+
+    :global(.ketcher-custom-item) {
+      cursor: pointer;
+      margin: 0 4px;
+
+      &:hover {
+        svg {
+          path {
+            fill: #0A93FC;
+          }
+        }
+      }
+    }
+  }
+
+  .simple-bottom-bar {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .bar-item {
+      border-radius: 4px;
+      background-color: #F8F8F8;
+      border: 1px solid #EEEEEE;
+      margin: 5px;
+      width: 32px;
+      height: 28px;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #979797;
+      transition: transform linear 0.2s;
+      user-select: none;
+
+      &:hover, &.active {
+        color: #0A93FC;
+        transform: scale(1.1);
+
+        svg {
+          path {
+            fill: #0A93FC;
+          }
+
+          g {
+            stroke: #0A93FC;
+
+            path {
+              stroke: none;
+            }
+          }
+        }
+      }
+    }
+
+    .group {
+      border-radius: 4px;
+      background-color: #F8F8F8;
+      border: 1px solid #EEEEEE;
+      display: flex;
+
+      .bar-item {
+        border: none;
+        margin: 0 3px;
+      }
+    }
+
+    .bar-left {
+      display: flex;
+      align-items: center;
+
+      & > .bar-item {
+        &:last-child {
+          svg {
+            width: 65%;
+          }
+        }
+      }
+    }
+
+    .bar-right {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+.preview-modal {
+  :global(.ant-modal-content) {
+    padding: 0;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+
+    :global(.ant-modal-close) {
+      color: #fcfcfc;
+    }
+
+    :global(.ant-modal-body) {
+      height: 75vh;
+      overflow-y: hidden;
+    }
+  }
+}

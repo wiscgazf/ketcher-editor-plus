@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/shims-window.d.ts","./src/vite-env.d.ts","./src/components/editor/index.tsx","./src/components/ketcheditor/index.tsx","./src/components/ketcher3d/index.tsx","./src/config/custombar.ts","./src/config/settings.ts","./src/utils/index.ts"],"version":"5.6.3"}

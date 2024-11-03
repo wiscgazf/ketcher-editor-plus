@@ -1,0 +1,164 @@
+.preview-3d-wrapper {
+  $primary: #0A93FC;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .preview-3d {
+    width: 100%;
+    height: 100%;
+  }
+
+  .simple-bottom-bar {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .bar-item {
+      border-radius: 4px;
+      background-color: #F8F8F8;
+      border: 1px solid #EEEEEE;
+      margin: 5px;
+      width: 32px;
+      height: 28px;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #979797;
+      transition: transform linear 0.2s;
+      user-select: none;
+
+      &:hover, &.active {
+        color: $primary;
+        transform: scale(1.1);
+
+        svg {
+          path {
+            fill: $primary;
+          }
+
+          g {
+            stroke: $primary;
+
+            path {
+              stroke: none;
+            }
+          }
+        }
+      }
+    }
+
+    .group {
+      border-radius: 4px;
+      background-color: #F8F8F8;
+      border: 1px solid #EEEEEE;
+      display: flex;
+
+      .bar-item {
+        border: none;
+        margin: 0 3px;
+      }
+    }
+
+    .bar-middle {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin: -1px 10px 0;
+      }
+
+      &.dark {
+        span {
+          color: #fff;
+        }
+
+        .arrow-item {
+          svg {
+            g {
+              fill: #fff;
+            }
+          }
+        }
+      }
+
+      .arrow-item {
+        &:hover {
+          cursor: pointer;
+
+          svg {
+            g {
+              fill: $primary;
+            }
+          }
+        }
+
+        &.active {
+          svg {
+            g {
+              fill: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .bar-left {
+      display: flex;
+      align-items: center;
+
+      .group {
+        .bar-item:first-child {
+          &:hover, &.active {
+            svg {
+              path {
+                fill: #0A93FC;
+              }
+
+              g {
+                stroke: none;
+
+                path, ellipse {
+                  stroke: #0A93FC;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .bar-item {
+        &:last-child {
+          &:hover, &.active {
+            svg {
+              path {
+                fill: none;
+                stroke: #0A93FC;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bar-right {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .hidden {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+  }
+}

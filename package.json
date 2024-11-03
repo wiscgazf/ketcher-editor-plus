@@ -1,0 +1,44 @@
+{
+  "name": "ketcher-editor-plus",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc -b && vite --mode dev",
+    "build:test": "tsc -b && vite build --mode test",
+    "build:live": "tsc -b && vite build  --mode live",
+    "build:iframe": "tsc -b && vite build  --mode iframe",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "prettier": "prettier --write ."
+  },
+  "dependencies": {
+    "@rdkit/rdkit": "^2024.3.5-1.0.0",
+    "antd": "^5.21.5",
+    "ketcher-core": "^2.25.0",
+    "ketcher-react": "^2.25.0",
+    "ketcher-standalone": "^2.25.0",
+    "miew": "^0.11.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite-plugin-commonjs": "^0.10.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/node": "^22.8.1",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.13",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3",
+    "sass": "^1.80.4",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.10.0",
+    "vite": "^5.4.9"
+  }
+}
